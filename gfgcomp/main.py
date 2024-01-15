@@ -6,6 +6,9 @@ from sklearn.preprocessing import StandardScaler
 # initialising application
 app = Flask(__name__)
 
+from pip._internal import main as pipmain
+
+pipmain(['install', 'flask'])
 
 API_KEY = "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"
 client = openai.OpenAI(api_key=API_KEY)
